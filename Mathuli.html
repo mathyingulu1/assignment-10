@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+    <link href="style.css" rel="stylesheet"/>
+	<script src="countries.js"></script>
+    <script src="script.js"></script>
+    
+    <title>form</title>
+  </head>
+  <body
+<div class="container">
+        <form id="form" class="form">
+            <h2>Register With Us</h2>
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter Username">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Enter password again">
+                <small>Error Message</small>
+            </div>
+		    <label class="mt-2" for="country">"Select your country</label>
+              <select id="country" name="country">
+             <option value="choose">select your country</option>
+			 </select><br/>
+			 
+            <button>Submit</button>
+        </form>
+    </div>
+	<div class="p-3">
+<form onsubmit="return validateForm(this)" action="https://postman-echo.com/post" method="post">
+  <div>
+  <input type="checkbox" name="agree" id="agree" value="yes" />
+  <label for="agree">I agree to the terms and conditions</label>
+  <div style="visibility:hidden; color:red" id="agree_chk_error">
+  Can't proceed as you didn't agree to the terms!
+  </div>
+  </div>
+  </form>
+</div>
+</body>
+</html>
